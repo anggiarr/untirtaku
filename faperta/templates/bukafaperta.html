@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <center>
+        <h1 style="font-family:'tahoma'; color:azure; background-color: darkblue">Fakultas Pertanian</h1>
+    </center>
+
+    <br>
+
+    <div style="font-family:'tahoma';color:cornflowerblue;margin:50px;text-align:justify " class="isifaperta">
+    <h3 style="color:rgb(57, 103, 188);text-align:center">{{ judul }}</h3> 
+    <ol>
+        <li>{{ jurusan1 }}</li>
+            <p>{{ penjelasanprodisatu }}</p>
+        <li>{{ jurusan2 }}</li>
+            <p>{{ penjelasanprodidua }}</p>
+        <li>{{ jurusan3 }}</li>
+            <p>{{ penjelasanproditiga }}</p>
+        <li>{{ jurusan4 }}</li>
+            <p>{{ penjelasanprodiempat }}</p>
+    
+    </ol>
+    </div>
+
+    <br><hr><br>
+    <div class="lokasifaperta" style="font-family:'tahoma';color:cornflowerblue;margin:60px;text-align:justify ">
+     <h3 style="color:rgb(57, 103, 188);text-align:center">{{ lokasi }}</h3><br>
+     <center><img style="width:400px;height:300px" src="/static/images/faperta untirta.jpg"></center>
+     <br>
+     <p style="text-align:center">{{ alamat }}</p>
+    </div>
+
+{% endblock %}
