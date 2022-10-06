@@ -10,12 +10,13 @@
     <link rel="stylesheet" href=" {% static 'css/bootsrap-grid.css' %}">
     <link rel="stylesheet" href=" {% static 'images' %}">
     <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    
 </head>
 <body>
     {% include 'navigasi.html' %}
     {% block content %}
     {% endblock %}
-    <script src="static/js/bootsrap.bundle.js"></script>
+    <script src="{% static 'js/bootsrap.bundle.js'%}"></script>
     
 
 </body>
