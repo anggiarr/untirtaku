@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . models import Dosen, Staf, Mahasiswa
 
 # Create your views here.
 def indexfisip(request):
