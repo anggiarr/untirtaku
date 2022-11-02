@@ -4,7 +4,6 @@
 
 {% block content %}
 
-
     <center>
         <h1 style="font-family:'tahoma'; color:azure; background-color: darkblue">Fakultas Pertanian</h1>
     </center>
@@ -34,4 +33,140 @@
      <p style="text-align:center">{{ alamat }}</p>
     </div>
 
+
+<br><hr><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 >Data Dosen Fakultas Pertanian<a href="{% url 'tambah_dosenfaperta' %}"> Tambah</a>
+                </h3>
+                {% for message in messages %}
+                    {% if message %}
+                        <div class="alert alert-success">{{ messages }}</div>
+                    {% endif %}
+                {% endfor %}
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>NIP</th>
+                            <th>Nama</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Foto</th>
+                            <th>Email</th>
+                            <th>Fakultas</th>
+                            <th>Prodi</th>
+                            <th>Alamat</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dosen in dosen %}
+                        <tr>
+                            <td>{{dosen.nip}}</td>
+                            <td><a href="{% url 'ubah_dosen' dosen.id %} ">{{ dosen.nama }}</a></td>
+                            <td>{{dosen.tanggal_lahir}}</td>
+                            <td>{{dosen.foto}}</td>
+                            <td>{{dosen.email}}</td>
+                            <td>{{dosen.fakultas}}</td>
+                            <td>{{dosen.prodi}}</td>
+                            <td>{{dosen.alamat}}</td>
+
+                            <td><button data-toggle="modal" data-target="#hapus-{{ dosen.id }}" class="btn btn-danger" >Hapus</button></td>
+
+                            <div class="modal" id="hapus-{{ dosen.id }}"></div>
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="modal-title">
+                                                <h5>Hapus</h5>
+                                            </div>
+                                        </div>
+                                        <div class="modal-body">
+                                            Apakah anda yakin ingin menghapus <strong>{{ dosen.nama | upper }}</strong>?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="{% url 'hapus_dosen' dosen.id %} " class="btn btn-danger">Hapus</a>
+                                        <button clas="btn btn-dark" data-dismiss="modal" >Tidak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+<br>
+
+                <h3 >Data Staf Fakultas Pertanian<a href="{% url 'tambah_staffaperta' %}"> Tambah</a>
+                </h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>NIP</th>
+                            <th>Nama</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Foto</th>
+                            <th>Email</th>
+                            <th>Unit</th>
+                            <th>Alamat</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for staf in staf %}
+                        <tr>
+                            <td>{{staf.nip}}</td>
+                            <td><a href="{% url 'ubah_staf' staf.id %}">{{ staf.nama }}</td>
+                            <td>{{staf.tanggal_lahir}}</td>
+                            <td>{{staf.foto}}</td>
+                            <td>{{staf.email}}</td>
+                            <td>{{staf.unit}}</td>
+                            <td>{{staf.alamat}}</td>
+                            <td><a href="" class="btn btn-danger">Hapus</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+<br>
+                <h3 >Data Mahasiswa Fakultas Pertanian<a href="{% url 'tambah_mahasiswafaperta' %}"> Tambah</a>
+                </h3>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Foto</th>
+                            <th>Email</th>
+                            <th>Fakultas</th>
+                            <th>Prodi</th>
+                            <th>Alamat</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mahasiswa in mahasiswa %}
+                        <tr>
+                            <td>{{mahasiswa.nim}}</td>
+                            <td><a href="{% url 'ubah_mahasiswa' mahasiswa.id %} ">{{ mahasiswa.nama }}</td>
+                            <td>{{mahasiswa.tanggal_lahir}}</td>
+                            <td>{{mahasiswa.foto}}</td>
+                            <td>{{mahasiswa.email}}</td>
+                            <td>{{mahasiswa.fakultas}}</td>
+                            <td>{{mahasiswa.prodi}}</td>
+                            <td>{{mahasiswa.alamat}}</td>
+                            <td><a href="" class="btn btn-danger">Hapus</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    
+    </table>
+
 {% endblock %}
+
+

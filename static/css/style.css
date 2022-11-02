@@ -1,10 +1,9 @@
 body {
     background-color:ghostwhite;
-}
-
-
-
-.menu{
+  }
+  
+  
+  .menu{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:bold;
     height:70px;
@@ -12,72 +11,75 @@ body {
     background-color:lightcyan;
     border-radius:5px;
     font-size:18px;
-}
-
-label{
+  }
+  
+  label{
     font-family:tahoma;
     font-size:20pt;
     color:darkblue;
     margin:10px;
     padding:5px;
     float: left;
-
-}
-
-.menu ul{
+  
+  }
+  
+  .menu ul{
     margin:0px;
     padding: 5px;
     background:none;
     display: block;
     float:right;
-
-}
-
-.menu ul li {
+  
+  }
+  
+  .menu ul li {
     list-style:none;
     display:inline-block;
-
-}
-
-.menu ul li a {
+  
+  }
+  
+  .menu ul li a {
     display:block;
     text-decoration: none;
     padding:20px;
     color:rgb(6, 188, 191);
-}
-
-.menu ul li a:hover {
+  }
+  
+  .menu ul li a:hover {
     display:block;
     color:blueviolet;
     background-color:azure;
     box-shadow:inset 0px 0px 5px lightskyblue;
-}
-
-.menu ul li .dropdown {
+  }
+  
+  .menu ul li .dropdown {
     display:none;
-
-}
-
-.menu ul li:hover .dropdown {
+  
+  }
+  
+  .menu ul li:hover .dropdown {
     display:block;
     background-color:lavender;
     position:absolute;
     padding:10px;
-
-}
-
-.menu ul li:hover .dropdown li{
+  
+  }
+  
+  .menu ul li:hover .dropdown li{
     display:block;
-
-}
-
-.menu ul li:hover .dropdown li a {
+  
+  }
+  
+  .menu ul li:hover .dropdown li a {
     padding:10px;
     border-radius: 5px;
     margin-bottom: 5px;
-}
-
-.menu ul li:hover .dropdown li a:hover {
+  }
+  
+  .menu ul li:hover .dropdown li a:hover {
     background-color:azure;
     box-shadow: inset 0px 0px 5px lightskyblue;
-}
+  }
+
+  
+  

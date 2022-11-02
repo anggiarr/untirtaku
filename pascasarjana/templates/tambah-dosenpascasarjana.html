@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            {% if pesan %}
+                <div class="alert alert-success"><a style="background-color:rgba(152, 202, 185, 0.678);font-family:Verdana, Geneva, Tahoma, sans-serif">{{pesan}}</a></div>
+            {% endif %}
+
+            <form action="/tambah-dosenpascasarjana/" method="post" >
+                {% csrf_token %}
+
+                {{ form.as_p }}
+                
+                <button class="btn btn-primary" style="background-color:rgba(95, 158, 160, 0.516); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tambah Dosen</button>
+        
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

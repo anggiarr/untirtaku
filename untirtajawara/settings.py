@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'feb',
     'pascasarjana',
     'profil',
-    'aboutuntirta'
+    'aboutuntirta',
 ]
 
 MIDDLEWARE = [
